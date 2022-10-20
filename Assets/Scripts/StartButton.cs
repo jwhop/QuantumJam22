@@ -17,20 +17,27 @@ public class StartButton : MonoBehaviour
     }
     void Start()
     {
-        
-         
+
         if (_startButton != null)
         {
             _startButton.onClick.AddListener(() => ButtonClicked());
 
         }
+       
     }
 
     private void ButtonClicked()
     {
-
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
-
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+            Debug.Log("scenenene");
+        }
+        
     }
 
 }

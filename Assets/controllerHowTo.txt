@@ -1,0 +1,8 @@
+CONTROLLER 
+
+-when in unity, use the SimpleSerial.cs file and attach it to a GameObject in the scene
+-use the Device Manager to see what COM port the arduino is on your computer. Device Manager->COM Ports -> Arduino Mega. 
+-Copy the com number (ex. COM6) and paste it into its respective input field under the simpleserial script.
+-using the simpleserial Write function will send to the controller a number of buttons to light up. 
+-you can call it by writing SimpleSerial.Instance.Write(x), where x is an int. 
+-SimpleSerial is reading serial input as to whether you're hitting the right or wrong buttons at any given time, you can find that code in the update loop. 

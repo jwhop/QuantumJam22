@@ -806,6 +806,8 @@ GameObject:
   - component: {fileID: 4630283812287003567}
   - component: {fileID: 5143426319409299123}
   - component: {fileID: 5143426319409299120}
+  - component: {fileID: 5913745126748861409}
+  - component: {fileID: 4973053509865972878}
   m_Layer: 0
   m_Name: Spine01
   m_TagString: Untagged
@@ -860,6 +862,35 @@ CapsuleCollider:
   m_Height: 0.024861615
   m_Direction: 0
   m_Center: {x: 0.00071382365, y: 0.0065261824, z: -1.4893682e-10}
+--- !u!114 &5913745126748861409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143426319409299121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ea7ce37fa94714a8d4dd588f9fdfe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 1
+  force: 2
+  onlyPullUp: 1
+--- !u!114 &4973053509865972878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143426319409299121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7516b4f6b0b8ae04c89c4c7573b317ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 2
+  offset: {x: 0, y: 1, z: 0}
 --- !u!1 &5596892837227091598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1236,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4644616252755996329}
-  - component: {fileID: 6551391162189587682}
   m_Layer: 0
   m_Name: Armature
   m_TagString: Untagged
@@ -1228,25 +1258,6 @@ Transform:
   m_Father: {fileID: 4378669325128384055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6551391162189587682
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6551391162189587683}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c4d3958e8aaad5d45acaa26ab845c096, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6627576723173663293
 GameObject:
   m_ObjectHideFlags: 0

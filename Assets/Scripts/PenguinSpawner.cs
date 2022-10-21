@@ -9,15 +9,9 @@ public class PenguinSpawner : MonoBehaviour
     private GameObject _penguinPrefab;
 
     public int PenguinCount;
-    void Start()
+    void Awake()
     {
         spawnPengys();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void spawnPengys()
@@ -25,7 +19,7 @@ public class PenguinSpawner : MonoBehaviour
 
         for (int i = 0; i < PenguinCount; i++)
         {
-            Instantiate(_penguinPrefab, new Vector3(4.5f, 5f, 0), Quaternion.identity, this.transform);
+            Instantiate(_penguinPrefab, new Vector3(3.5f,6f, 0), Quaternion.identity, this.transform);
 
         }
     }

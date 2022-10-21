@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class SimpleSerial : MonoBehaviour
 {
     public static SimpleSerial Instance { get; private set; }
-    public String portName = "COM6";  // use the port name for your Arduino, such as /dev/tty.usbmodem1411 for Mac or COM3 for PC
+    public String portName = "COM3";  // use the port name for your Arduino, such as /dev/tty.usbmodem1411 for Mac or COM3 for PC
 
     private SerialPort serialPort = null; 
     private int baudRate = 115200;  // match your rate from your serial in Arduino

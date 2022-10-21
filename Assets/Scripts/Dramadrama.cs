@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Dramadrama : MonoBehaviour
 {
-
+    public static Dramadrama Instance { get; private set; }
     [SerializeField]
     private AudioSource _audioSource;
 
@@ -40,9 +40,12 @@ public class Dramadrama : MonoBehaviour
     private bool _endGame = false;
 
     public int Timer = 50;
+    private float dramaTimer = 5f;
+    private float dramaTimerLength = 5f;
 
     void Start()
     {
+        Instance = this;
        _maintainHeights = _pinguParent.GetComponentsInChildren<MaintainHeight>();
        _holdUprights = _pinguParent.GetComponentsInChildren<HoldUpright>();
 
@@ -67,6 +70,7 @@ public class Dramadrama : MonoBehaviour
         // test keys 
         if (Input.GetKeyDown(KeyCode.D))
         {
+            SimpleSerial.Instance.Write(FetchArray.Instance.PickRandom());
             SetDrama();
         }
 
@@ -79,7 +83,7 @@ public class Dramadrama : MonoBehaviour
         {
             SetLoseState();
         }
-
+        
         if (_countingDown)
         {
             Timer--;
@@ -93,6 +97,19 @@ public class Dramadrama : MonoBehaviour
 
                 }
             }
+        }
+        else
+        {
+            if(dramaTimer > 0)
+            {
+                dramaTimer -= Time.deltaTime;
+                if (dramaTimer < 0)
+                {
+                    SimpleSerial.Instance.Write(FetchArray.Instance.PickRandom());
+                    SetDrama();
+                }
+            }
+            
         }
     }
 
@@ -121,6 +138,9 @@ public class Dramadrama : MonoBehaviour
 
     public void ResolveDrama()
     {
+        dramaTimer = dramaTimerLength;
+        dramaTimerLength -= 0.1f; //maybe we can put this on a curve so the difficulty isnt linearly increasing?
+
         _audioSource.clip = _calmMusic;
         _audioSource.Play();
 

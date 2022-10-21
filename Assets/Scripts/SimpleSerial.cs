@@ -70,11 +70,13 @@ public class SimpleSerial : MonoBehaviour
             {
                 //trigger end of game
                 print("FAILING");
+                Dramadrama.Instance.SetLoseState();
             }
             else if (serialInput == "SUCCESS")
             {
                 //keep playing game 
                 print("SUCCESS");
+                Dramadrama.Instance.ResolveDrama();
             }
         }
         

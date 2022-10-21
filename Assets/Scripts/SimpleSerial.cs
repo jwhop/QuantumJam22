@@ -47,18 +47,23 @@ public class SimpleSerial : MonoBehaviour
     void ProcessData()
     {
         Debug.Log("Thread: Start");
-        while (programActive)
-        {
-            try
-            {
-                serialInput = serialPort.ReadLine();
-            }
-            catch (TimeoutException)
-            {
 
+        if (serialInput != null)
+        {
+            while (programActive)
+            {
+                try
+                {
+                    serialInput = serialPort.ReadLine();
+                }
+                catch (TimeoutException)
+                {
+
+                }
             }
+            Debug.Log("Thread: Stop");
         }
-        Debug.Log("Thread: Stop");
+ 
     }
 
     void Update()
@@ -84,8 +89,12 @@ public class SimpleSerial : MonoBehaviour
 
     public void Write(int numButtons)
     {
-        print("writing.." + numButtons);
-        serialPort.WriteLine(numButtons.ToString());
+        if (serialInput == "FAIL")
+        {
+            print("writing.." + numButtons);
+            serialPort.WriteLine(numButtons.ToString());
+        }
+           
     }
 
     

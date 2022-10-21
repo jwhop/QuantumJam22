@@ -34,10 +34,8 @@ public class StartButton : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
-            Debug.Log("scenenene");
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
-        
     }
 
 }

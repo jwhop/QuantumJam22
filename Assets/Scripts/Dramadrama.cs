@@ -32,6 +32,9 @@ public class Dramadrama : MonoBehaviour
     [SerializeField]
     private TMP_Text _dramaCountText;
 
+    [SerializeField]
+    private AudioSource _sfx;
+
     private int _dramaCount = 0;
 
 
@@ -58,19 +61,16 @@ public class Dramadrama : MonoBehaviour
     void Update()
     {
 
-        //TODO
-        //set up some kind of timer to decide when to set drama state, like after X amount of calm time
-        //set up controller logic to light up in drama state, and set resolve drama or lose state 
-        //extra text for telling users what controls are etc 
-        //flesh out rest of text in game etc. 
-    
-
-        //btw... game starts from splash scene 
+      
 
         // test keys 
         if (Input.GetKeyDown(KeyCode.D))
         {
+            if (SimpleSerial.Instance != null)
+            {
             SimpleSerial.Instance.Write(FetchArray.Instance.PickRandom());
+
+            }
             SetDrama();
         }
 
@@ -105,7 +105,11 @@ public class Dramadrama : MonoBehaviour
                 dramaTimer -= Time.deltaTime;
                 if (dramaTimer < 0)
                 {
-                    SimpleSerial.Instance.Write(FetchArray.Instance.PickRandom());
+                    if (SimpleSerial.Instance != null)
+                    {
+                        SimpleSerial.Instance.Write(FetchArray.Instance.PickRandom());
+
+                    }
                     SetDrama();
                 }
             }
@@ -164,7 +168,7 @@ public class Dramadrama : MonoBehaviour
     public void SetLoseState()
     {
 
-
+        _sfx.Play();
         _text.text = " Oh no... you did not manage to save the colony... Better luck next time (if there is a next time)";
 
 

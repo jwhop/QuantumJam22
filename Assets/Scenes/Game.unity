@@ -327,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: -200, y: -600}
+  m_AnchoredPosition: {x: 0, y: 180}
+  m_SizeDelta: {x: -200, y: -640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &238857143
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.7924528, g: 0.119881235, b: 0.0037379938, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -377,13 +377,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -675,8 +675,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278212863
+  m_fontColor: {r: 1, g: 0.34509805, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1357,6 +1357,14 @@ MonoBehaviour:
   - EEEMS! Pixie stole Crystal's fish!!
   - Drat, there is some bickering amongst the colony...
   - Oh dear... there is trouble in paradise...
+  - 'Drama drama, Eric used Patricia''s comb without asking! '
+  - Oh snap! Tony broke the fishing rod because he was being careless!!
+  - Jeepers creepers!! Mario rolled her eyes at Josh!
+  - Gosh darnit!! Feather ate all the whole snow cone secret stash!
+  - Gee whiskers!! Brendan admitted he watches football.
+  - 'Grumble grumble, Fiona broke Zach''s snowman! '
+  - Zoinks! Robert never watched the last airbender! How could he!
+  - 'Yowza!! Penguin is mad for no apparent reason. '
   _pinguParent: {fileID: 325406614}
   _text: {fileID: 238857143}
   _dramaCountText: {fileID: 1953034497}

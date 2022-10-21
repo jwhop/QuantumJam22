@@ -43,8 +43,8 @@ public class Dramadrama : MonoBehaviour
     private bool _endGame = false;
 
     public int Timer = 50;
-    private float dramaTimer = 5f;
-    private float dramaTimerLength = 5f;
+    private float dramaTimer = 10f;
+    private float dramaTimerLength = 10f;
 
     void Start()
     {

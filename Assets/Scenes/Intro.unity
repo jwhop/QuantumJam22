@@ -375,7 +375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.011413574, y: -372.63785}
+  m_AnchoredPosition: {x: -0.011413574, y: -405.1}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &404682540
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.03529412, g: 0, b: 0.99215686, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7490196, g: 0.7647059, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -505,7 +505,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: -200, y: -400}
+  m_SizeDelta: {x: -280, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &789567610
 MonoBehaviour:
@@ -527,12 +527,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "We're about to introuduce you to perfect penguin polycule. \n\nWell, almost
-    perfect. \n\nEvery now and then, there's a bit of drama that arrises in the colony...
+    perfect. \n\nEvery now and then, there's a bit of drama that plagues the colony...
     disagreements, noisy arguments, things you can't control, you know? \n\nIt's
     your job to help soothe the penguins back to a calm state! \n\nClick and drag
-    penguins to move them around. When there is drama, try to press all the buttons
-    that are lit up at the same time! If you do, you will restore the state to calm.
-    If you press an unlit button, however, the colony will break up... forever. \n\n"
+    penguins to move them around. When there is drama, try to press and hold down
+    all the buttons that are lit up on the controller at the same time! If you do,
+    you will restore the state to calm. If you press an unlit button, however, the
+    colony will break up... forever. \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed1146cf04bb5354d9b185145255fe3d, type: 2}
   m_sharedMaterial: {fileID: -532139266676188855, guid: ed1146cf04bb5354d9b185145255fe3d,
@@ -560,8 +561,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

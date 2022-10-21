@@ -29,6 +29,10 @@ public class Dramadrama : MonoBehaviour
     [SerializeField]
     private TMP_Text _text;
 
+    [SerializeField]
+    private TMP_Text _dramaCountText;
+
+    private int _dramaCount = 0;
 
 
     private bool _countingDown = false;
@@ -43,6 +47,8 @@ public class Dramadrama : MonoBehaviour
        _holdUprights = _pinguParent.GetComponentsInChildren<HoldUpright>();
 
         _text.text = "Ah what a wonderful and peaceful incestuous penguin colony";
+
+        _dramaCountText.text = _dramaCount.ToString();
     }
 
    
@@ -131,7 +137,8 @@ public class Dramadrama : MonoBehaviour
             hu.force = 2;
         }
 
-        _text.text = string.Empty;
+        _dramaCount++;
+        _dramaCountText.text = _dramaCount.ToString();
     }
 
     public void SetLoseState()

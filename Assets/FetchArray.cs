@@ -11,8 +11,13 @@ public class FetchArray : MonoBehaviour
     public int current;
     
     public int PickRandom() {
-        i = Random.Range(0, qN.Length);
-        current = qN[i];
+        do {
+            i = Random.Range(0, qN.Length);
+            print("i is " + i);
+            current = qN[i];
+            
+        }
+        while ( current == 0);
         return current;
     }
 

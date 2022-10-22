@@ -47,22 +47,21 @@ public class SimpleSerial : MonoBehaviour
     void ProcessData()
     {
         Debug.Log("Thread: Start");
+        WriteStart();
 
-        if (serialInput != null)
+        while (programActive)
         {
-            while (programActive)
+            try
             {
-                try
-                {
-                    serialInput = serialPort.ReadLine();
-                }
-                catch (TimeoutException)
-                {
-
-                }
+                serialInput = serialPort.ReadLine();
             }
-            Debug.Log("Thread: Stop");
+            catch (TimeoutException)
+            {
+
+            }
         }
+        Debug.Log("Thread: Stop");
+        
  
     }
 
@@ -70,7 +69,7 @@ public class SimpleSerial : MonoBehaviour
     {
         if (serialInput != null)
         {
-            
+            print(serialInput);
             if(serialInput == "FAIL")
             {
                 //trigger end of game
@@ -83,21 +82,20 @@ public class SimpleSerial : MonoBehaviour
                 print("SUCCESS");
                 Dramadrama.Instance.ResolveDrama();
             }
+            serialInput = null;
         }
         
     }
-
+    public void WriteStart()
+    {
+        print("writing start");
+        serialPort.WriteLine("0");
+    }
     public void Write(int numButtons)
     {
-        if (serialInput == "FAIL")
-        {
-            print("writing.." + numButtons);
-            serialPort.WriteLine(numButtons.ToString());
-        }
-           
-    }
-
-    
+        print("writing.." + numButtons);
+        serialPort.WriteLine(numButtons.ToString());           
+    }    
 
     public void OnDisable()  // attempts to closes serial port when the gameobject script is on goes away
     {

@@ -42,9 +42,9 @@ public class Dramadrama : MonoBehaviour
 
     private bool _endGame = false;
 
-    public int Timer = 50;
-    private float dramaTimer = 10f;
-    private float dramaTimerLength = 10f;
+    public int Timer = 5;
+    private float dramaTimer = 3f;
+    private float dramaTimerLength = 3f;
 
     void Start()
     {
@@ -83,7 +83,7 @@ public class Dramadrama : MonoBehaviour
         {
             SetLoseState();
         }
-        
+
         if (_countingDown)
         {
             Timer--;
@@ -98,7 +98,7 @@ public class Dramadrama : MonoBehaviour
                 }
             }
         }
-        else
+        else if (!_endGame) 
         {
             if(dramaTimer > 0)
             {
@@ -163,6 +163,7 @@ public class Dramadrama : MonoBehaviour
         }
 
         _dramaCount++;
+        if (_dramaCount > 10) SetWinState();
         _dramaCountText.text = _dramaCount.ToString();
     }
 
@@ -177,6 +178,15 @@ public class Dramadrama : MonoBehaviour
         _endGame = true;
 
         
+    }
+    public void SetWinState()
+    {
+        _sfx.Play();
+        _text.text = "You kept the colony together! congrats!!";
+
+
+        _countingDown = true;
+        _endGame = true;
     }
 
 }

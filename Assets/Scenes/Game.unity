@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca8dfb9b88f54a46882459b0b676db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM3
+  portName: COM6
 --- !u!114 &1516225544
 MonoBehaviour:
   m_ObjectHideFlags: 0

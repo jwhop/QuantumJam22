@@ -61,8 +61,11 @@ public class Dramadrama : MonoBehaviour
     void Update()
     {
 
-      
 
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            SceneManager.LoadScene(0);
+        }
         // test keys 
         if (Input.GetKeyDown(KeyCode.D))
         {
